@@ -76,7 +76,7 @@ def save_data(data_list):
     df['hour'] = df['start'].dt.hour
 
     for hour, group in df.groupby('hour'):
-        filename = f"/Users/Victoria/PycharmProjects/BTCData/hour_{hour:02d}.csv"
+        filename = f"/Users/Jay/PycharmProjects/BTCData/hour_{hour:02d}.csv"
         group.to_csv(filename, index=False)
         print(f"Saved file: {filename}")
 
